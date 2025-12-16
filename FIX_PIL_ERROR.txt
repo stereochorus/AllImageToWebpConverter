@@ -1,0 +1,67 @@
+================================================================================
+FIX: ModuleNotFoundError: No module named 'PIL'
+================================================================================
+
+MASALAH:
+--------
+Saat menjalankan ALLimageToWebpConverter.exe muncul error:
+"ModuleNotFoundError: No module named 'PIL'"
+
+PENYEBAB:
+---------
+PyInstaller tidak otomatis meng-include library Pillow (PIL) dan piexif
+ke dalam executable.
+
+SOLUSI CEPAT:
+-------------
+
+Option 1: REBUILD dengan build_simple.bat (RECOMMENDED)
+--------------------------------------------------------
+1. Buka Command Prompt
+2. Masuk ke folder project:
+   cd "f:\python project\AllImageTowebpConverter"
+
+3. Jalankan:
+   build_simple.bat
+
+4. Selesai! File .exe baru sudah fix di: dist\ALLimageToWebpConverter.exe
+
+
+Option 2: Rebuild Manual
+-------------------------
+1. Install dependencies:
+   pip install Pillow piexif pyinstaller
+
+2. Rebuild dengan collect-all:
+   pyinstaller --onefile --collect-all=PIL --collect-all=piexif --hidden-import=PIL --hidden-import=piexif --console --name=ALLimageToWebpConverter converter.py
+
+3. Ambil file .exe dari folder dist/
+
+
+Option 3: Gunakan spec file yang sudah diupdate
+------------------------------------------------
+1. Jalankan:
+   pyinstaller --clean --noconfirm ALLimageToWebpConverter.spec
+
+2. File .spec sudah diupdate dengan hiddenimports yang diperlukan
+
+
+VERIFIKASI:
+-----------
+Setelah rebuild, test executable:
+1. Jalankan: dist\ALLimageToWebpConverter.exe
+2. Jika program menampilkan welcome message bilingual, berarti berhasil!
+3. Jika masih error, gunakan build_simple.bat
+
+
+CATATAN:
+--------
+- build_simple.bat adalah cara termudah dan paling reliable
+- Script ini otomatis collect SEMUA file yang diperlukan dari PIL dan piexif
+- File .exe hasil build akan sekitar 20-30 MB (normal untuk include PIL)
+
+
+================================================================================
+Author: MadS
+Version: 1.0.0
+================================================================================

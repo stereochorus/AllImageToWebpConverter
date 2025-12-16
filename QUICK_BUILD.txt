@@ -1,0 +1,54 @@
+================================================================================
+QUICK BUILD GUIDE - ALLimageToWebpConverter.exe
+Author: MadS
+================================================================================
+
+STEP 1: Install All Dependencies
+----------------------------
+pip install Pillow piexif pyinstaller
+
+
+STEP 2: Build Executable
+----------------------------
+Pilih salah satu:
+
+A) RECOMMENDED - Simple Build (Auto-include all):
+   build_simple.bat
+
+B) Advanced Build:
+   build.bat
+
+C) Manual:
+   pyinstaller --clean --noconfirm ALLimageToWebpConverter.spec
+
+
+STEP 3: Ambil File .exe
+----------------------------
+Location: dist\ALLimageToWebpConverter.exe
+
+Salin file ini ke lokasi yang Anda inginkan.
+
+
+SELESAI!
+================================================================================
+
+CARA MENGGUNAKAN .exe:
+1. Jalankan ALLimageToWebpConverter.exe
+2. Program akan otomatis membuat 3 folder:
+   - source/         (taruh gambar di sini)
+   - result/         (hasil konversi)
+   - failedConvert/  (file yang gagal)
+3. Letakkan gambar di folder source/
+4. Program otomatis convert ke WebP (max 150 KB dengan metadata lengkap)
+5. Tekan 'Q' untuk stop
+
+================================================================================
+
+PROGRAM INFO:
+- Name    : ALLimageToWebpConverter.exe
+- Author  : MadS
+- Version : 1.0.0
+- Max Size: 150 KB per file
+- Metadata: ALWAYS preserved (GPS, EXIF, DateTime)
+
+================================================================================

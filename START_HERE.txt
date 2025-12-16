@@ -1,0 +1,108 @@
+================================================================================
+                   ALL IMAGE TO WEBP CONVERTER
+                         by MadS - v1.0.0
+================================================================================
+
+SELAMAT! Semua file sudah siap.
+
+================================================================================
+CARA MENGGUNAKAN PROGRAM (3 Pilihan):
+================================================================================
+
+OPTION 1: Build ke .exe (RECOMMENDED)
+--------------------------------------
+1. Install PyInstaller:
+   pip install pyinstaller
+
+2. Jalankan build script:
+   build.bat
+
+3. Ambil file executable:
+   dist\ALLimageToWebpConverter.exe
+
+4. SELESAI! File .exe bisa langsung digunakan tanpa Python.
+
+
+OPTION 2: Jalankan dari Python
+-------------------------------
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Jalankan program:
+   python converter.py
+
+3. Program siap digunakan!
+
+
+OPTION 3: Jalankan .exe (jika sudah di-build)
+----------------------------------------------
+1. Jalankan: ALLimageToWebpConverter.exe
+2. SELESAI!
+
+
+================================================================================
+CARA MENGGUNAKAN:
+================================================================================
+
+1. Program akan membuat 3 folder otomatis:
+   - source/         ← Taruh gambar di sini
+   - result/         ← Hasil konversi WebP
+   - failedConvert/  ← File yang gagal
+
+2. Letakkan gambar apapun di folder source/
+
+3. Program otomatis convert:
+   ✓ Max 150 KB per file
+   ✓ Metadata GPS, EXIF, DateTime terjaga
+   ✓ Kualitas optimal (dynamic 25-70)
+
+4. Untuk berhenti:
+   - Tekan 'Q' pada keyboard
+   - Atau Ctrl+C
+   - Atau klik X
+
+
+================================================================================
+FILE DOKUMENTASI:
+================================================================================
+
+README.md            - Dokumentasi lengkap program
+BUILD_GUIDE.md       - Panduan build executable detail
+QUICK_BUILD.txt      - Quick reference build
+PROJECT_SUMMARY.md   - Summary lengkap project
+
+
+================================================================================
+PROGRAM FEATURES:
+================================================================================
+
+✓ Balanced Compression (max 150 KB)
+✓ Metadata ALWAYS Preserved (GPS, EXIF, DateTime)
+✓ All image formats supported (JPG, PNG, BMP, TIFF, GIF, dll)
+✓ Bilingual (English & Indonesian)
+✓ Continuous monitoring
+✓ Auto-delete source setelah convert
+✓ Auto-move failed files
+
+
+================================================================================
+QUICK START - BUILD .exe:
+================================================================================
+
+Step 1:  pip install pyinstaller
+Step 2:  build.bat
+Step 3:  dist\ALLimageToWebpConverter.exe
+
+SELESAI!
+
+
+================================================================================
+Author  : MadS
+Version : 1.0.0
+Date    : December 2025
+License : Copyright (c) 2025 MadS. All rights reserved.
+================================================================================
+
+Terima kasih telah menggunakan ALL Image to WebP Converter!
+
+================================================================================
